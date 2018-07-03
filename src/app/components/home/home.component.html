@@ -1,0 +1,12 @@
+<section class="container">
+	<section class="main">
+		<section class="blog-list">
+			<mat-card *ngFor="let post of this.bS.posts" class="blog" routerLink="/{{post.slug}}">
+				<mat-card-title [innerHtml]="limit(post.title.rendered)"  matTooltip="{{post.title.rendered}}" [matTooltipPosition]="'above'"></mat-card-title>
+				<mat-card-subtitle>{{post.date | date}}</mat-card-subtitle>
+				<mat-card-content [innerHtml]="post.excerpt.rendered"></mat-card-content>
+				<mat-card-actions><button mat-button routerLink="/{{post.slug}}">Read More</button></mat-card-actions>
+			</mat-card>
+		</section>
+	</section>
+</section>

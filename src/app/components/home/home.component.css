@@ -1,0 +1,29 @@
+.container{
+	width: 100%;
+}
+.main{
+	margin: 0 auto;
+	min-height: 100vh;
+	background-color: #CFD8DC;
+}
+.blog-list{
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.blog{
+	width: 100%;
+	max-width: 300px;
+	margin: 10px;
+	min-height: 400px;
+	background-color: #ECEFF1;
+	cursor: pointer;
+}
+.blog mat-card-title{
+	font-size: 15px;
+	font-weight: bolder;
+	color: #263238;
+}

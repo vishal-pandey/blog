@@ -1,0 +1,11 @@
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
+@import "~@angular/material/prebuilt-themes/vishal.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+body{
+	margin: 0;
+	padding: 0;
+}
+*{
+	box-sizing: border-box;
+	font-family: "Roboto Slab";
+}
