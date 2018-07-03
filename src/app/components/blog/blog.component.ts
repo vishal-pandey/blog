@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
 import { switchMap } from 'rxjs/operators';
+import { Title }     from '@angular/platform-browser';
 declare var window: any;
 
 @Component({
@@ -15,7 +16,8 @@ export class BlogComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
   private router: Router,
-  private bS:BlogService) { }
+  private bS:BlogService,
+  private titleService: Title ) { }
 
   loading:boolean = true;
   post:any;
@@ -28,6 +30,7 @@ export class BlogComponent implements OnInit {
     	this.bS.getBlog(r.params.id).subscribe((r:any)=>{
         this.post = r[0];
         this.loading = false;
+        this.titleService.setTitle(this.post.title.rendered + " -- Blog | Vishal Pandey");
         this.refresh = false;
         window.FB.XFBML.parse();
         console.log(r[0]);

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule , Title} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // FORM CONTROL
@@ -136,6 +136,6 @@ import { BlogService } from './services/blog.service';
     CommonModule,
     HttpClientModule
   ],
-  providers: [MainService, BlogService]
+  providers: [MainService, BlogService, Title]
 })
 export class AppModule { }

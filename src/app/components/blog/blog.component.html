@@ -2,6 +2,7 @@
 	<section class="main">
 		<section class="blog">
 			<mat-progress-bar mode="indeterminate" *ngIf="loading" class="loader"></mat-progress-bar>
+			<title [innerHtml]="post?.title?.rendered"></title>
 			<h1><span [innerHtml]="post?.title?.rendered"></span><br><small>{{post?.date | date}}</small></h1>
 			<mat-divider style="width: 100%"></mat-divider>
 			<p [innerHtml]="post?.content?.rendered"></p>
